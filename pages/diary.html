@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Учебный дневник</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="../favicon/favicon.ico" alt="Логотип" class="logo-image">
+        Максим
+    </div>
+    <h1 style="display: none;">Максим</h1>
+    <button class="mobile-menu-btn">☰</button>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="/pages/projects.html" class="active">Проекты</a></li>
+            <li><a href="/pages/diary.html">Дневник</a></li>
+            <li><a href="/pages/contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <section class="diary-container">
+            <h2>Мой учебный прогресс</h2>
+            
+            <!-- Записи дневника -->
+            <div class="diary-entries" id="diaryEntries">
+                <!-- Записи будут добавляться через JavaScript -->
+            </div>
+
+            <!-- Форма добавления новой записи -->
+            <div class="add-entry-section">
+                <button class="btn" id="addEntryBtn">Добавить запись</button>
+                
+                <div class="add-entry-form" id="addEntryForm" style="display: none;">
+                    <h3>Новая запись</h3>
+                    <form id="newEntryForm">
+                        <div class="form-group">
+                            <label for="entryDate">Дата:</label>
+                            <input type="date" id="entryDate" name="entryDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="entryTitle">Заголовок:</label>
+                            <input type="text" id="entryTitle" name="entryTitle" placeholder="Название задачи" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="entryStatus">Статус:</label>
+                            <select id="entryStatus" name="entryStatus" required>
+                                <option value="completed">✓ Выполнено</option>
+                                <option value="in-progress">In progress</option>
+                                <option value="planned">Запланировано</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="entryDescription">Описание:</label>
+                            <textarea id="entryDescription" name="entryDescription" placeholder="Подробное описание задачи..."></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn">Добавить</button>
+                            <button type="button" class="btn btn-secondary" id="cancelEntryBtn">Отмена</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Текущие курсы -->
+            <section class="current-courses">
+                <h2>Текущие курсы</h2>
+                <div class="courses-grid">
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">Веб-разработка</span>
+                            <span class="course-percent">90%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%" data-percent="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">JavaScript</span>
+                            <span class="course-percent">70%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%" data-percent="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">React</span>
+                            <span class="course-percent">50%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%" data-percent="50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Дополнительные курсы -->
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">HTML/CSS</span>
+                            <span class="course-percent">85%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%" data-percent="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">Bootstrap</span>
+                            <span class="course-percent">75%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%" data-percent="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">Node.js</span>
+                            <span class="course-percent">40%</span>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%" data-percent="40"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Контакты</p>
+    </footer>
+
+    <script src="../scripts/diary.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

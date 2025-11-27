@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Контакты</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="../favicon/favicon.ico" alt="Логотип" class="logo-image">
+        Максим
+    </div>
+    <h1 style="display: none;">Максим</h1>
+    <button class="mobile-menu-btn">☰</button>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="/pages/projects.html" class="active">Проекты</a></li>
+            <li><a href="/pages/diary.html">Дневник</a></li>
+            <li><a href="/pages/contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="contacts-container">
+            <div class="contacts-content">
+                <div class="contacts-form-section">
+                    <h2>Свяжитесь со мной</h2>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><strong>Имя:</strong></label>
+                            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><strong>Email:</strong></label>
+                            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><strong>Сообщение:</strong></label>
+                            <textarea id="message" name="message" placeholder="Введите ваше сообщение..." required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn">Отправить сообщение</button>
+                    </form>
+                </div>
+
+                <div class="contacts-info-section">
+                    <div class="divider">
+                        <hr>
+                    </div>
+                    
+                    <div class="contacts-info">
+                        <h3>Контакты:</h3>
+                        <ul class="contacts-list">
+                            <li class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span class="contact-text">student@edu.ru</span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon">💻</span>
+                                <span class="contact-text">GitHub: username</span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span class="contact-text">Город, Страна</span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span class="contact-text">+7 (999) 123-45-67</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Контакты</p>
+    </footer>
+
+    <script src="../scripts/contacts.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
