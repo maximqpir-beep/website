@@ -16,13 +16,13 @@
     <h1 style="display: none;">Максим</h1>
     <button class="mobile-menu-btn">☰</button>
     <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="/pages/projects.html" class="active">Проекты</a></li>
-            <li><a href="/pages/diary.html">Дневник</a></li>
-            <li><a href="/pages/contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="pages/projects.html">Проекты</a></li>
+        <li><a href="pages/diary.html">Дневник</a></li>
+        <li><a href="pages/contacts.html">Контакты</a></li>
+    </ul>
+</nav>
 </header>
 
     <main>
@@ -34,7 +34,7 @@
                 <a href="assets/resume.pdf" class="btn" download>Скачать резюме</a>
             </div>
             <div class="hero-image">
-                <a href = "images/WIN_20251009_18_49_39_Pro.jpg"></a>
+                <img src="images/WIN_20251009_18_49_39_Pro.jpg" alt="Фото Максима" class="profile-photo">
             </div>
         </section>
 
@@ -67,13 +67,31 @@
         </section>
 
         <section class="best-projects">
-            <h2>Лучшие проекты</h2>
-            <div class="projects-grid">
-                <div class="project-card">П1</div>
-                <div class="project-card">П2</div>
-                <div class="project-card">П3</div>
+    <h2>Лучшие проекты</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="images/P1.png" alt="Личный сайт" class="project-image">
+            <div class="project-overlay">
+                <h3>Личный сайт</h3>
+                <p>HTML, CSS</p>
             </div>
-        </section>
+        </div>
+        <div class="project-card">
+            <img src="images/todo.png" alt="Todo приложение" class="project-image">
+            <div class="project-overlay">
+                <h3>Todo приложение</h3>
+                <p>JavaScript</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/P3.png" alt="Интернет-магазин" class="project-image">
+            <div class="project-overlay">
+                <h3>Интернет-магазин</h3>
+                <p>React</p>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>

@@ -1302,3 +1302,581 @@ footer {
         height: 28px;
     }
 }
+/* Global Layout Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    /* flex: 1 позволяет main занимать всё доступное пространство */
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto; /* Важно: это заставляет футер всегда быть внизу */
+    flex-shrink: 0; /* Не позволяет футеру сжиматься */
+    width: 100%;
+}
+
+/* Альтернативный вариант с position: fixed */
+/* 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+body {
+    padding-bottom: 80px; /* Добавляем отступ снизу равный высоте футера */
+
+/* Ensure content doesn't hide behind footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+/* Profile Photo Styles */
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero-image:hover .profile-photo {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Fallback if image doesn't load
+.hero-image {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; */
+}
+
+.hero-image::before {
+    content: "📷";
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0.3;
+    display: none; /* Скрываем, если фото загружено */
+}
+/* Best Projects Section with Images */
+.best-projects .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 0;
+    height: 250px;
+    cursor: pointer;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    transform: translateY(0);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-overlay h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.project-overlay p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Fallback if images don't load */
+.project-card::before {
+    content: "📱";
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    display: none;
+}
+
+.project-card:not(.has-image)::before {
+    display: block;
+}
+
+.project-card:not(.has-image) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* .project-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.fallback-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.project-fallback h3 {
+    margin: 0;
+    font-size: 1.2rem;
+} */
+/* Projects with Images */
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* .project-preview-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.fallback-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.fallback-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+} */
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-tech {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.project-card:hover .project-preview-image {
+    transform: scale(1.05);
+}
+
+/* Modal Image Styles */
+.modal-main-image {
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.modal-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+/* Projects Page Specific Styles */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.projects-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.readme-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.readme-file {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.file-icon {
+    font-size: 1.2rem;
+}
+
+.file-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.file-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.page-counter {
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+}
+
+/* Project Card Enhancements */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-date {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+/* Modal Enhancements */
+.modal-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-tech {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.modal-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.modal-description,
+.modal-features,
+.modal-images-section {
+    margin-bottom: 1.5rem;
+}
+
+.modal-description h4,
+.modal-features h4,
+.modal-images-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.modal-features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-features li {
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.modal-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.modal-images-section .modal-images {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.modal-image {
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 120px;
+    background: var(--background-color);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+/* Mobile Responsive for Projects */
+@media (max-width: 768px) {
+    .projects-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .readme-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .modal-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .project-image-container {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        padding: 1rem;
+    }
+    
+    .projects-footer {
+        padding: 1rem;
+    }
+    
+    .modal-images .modal-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-image-container {
+        height: 150px;
+    }
+}
+/* Projects with Real Images */
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* .project-preview-fallback {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.fallback-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.fallback-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+} */
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-tech {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.project-card:hover .project-preview-image {
+    transform: scale(1.05);
+}
+
+/* Modal Screenshots */
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.modal-image-item {
+    text-align: center;
+}
+
+.modal-screenshot {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 120px;
+    background: var(--background-color);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.placeholder-text {
+    font-size: 0.8rem;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+/* Category-specific background colors for fallback
+.project-card.html .project-preview-fallback {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.project-card.js .project-preview-fallback {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+}
+
+.project-card.react .project-preview-fallback {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.project-card.bootstrap .project-preview-fallback {
+    background: linear-gradient(135deg, #7966ea, #a274b2);
+} */
+
+/* Mobile Responsive for Project Images */
+@media (max-width: 768px) {
+    .project-image-container {
+        height: 180px;
+    }
+    
+    .modal-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image-container {
+        height: 150px;
+    }
+    
+    .modal-images {
+        grid-template-columns: 1fr;
+    }
+}
