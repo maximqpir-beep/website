@@ -79,8 +79,8 @@
                     description: "Полностью адаптивный личный сайт-портфолио с современным дизайном.",
                     fullDescription: "Этот проект представляет собой личный сайт-портфолио, разработанный с использованием современных веб-технологий. Сайт полностью адаптивен и корректно отображается на всех устройствах. Особенности проекта включают семантическую HTML-разметку, продвинутые CSS-техники и интерактивные элементы.",
                     images: ["../pictures/personal-site-1.jpg", "../pictures/personal-site-2.jpg", "../pictures/personal-site-3.jpg"],
-                    liveLink: "https://example.com/personal-site",
-                    codeLink: "https://github.com/username/personal-site",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-12-01",
                     image: "../pictures/personal-site.jpg"
                 },
@@ -92,8 +92,8 @@
                     description: "Интерактивное приложение для управления задачами с возможностью добавления, удаления, редактирования и фильтрации задач.",
                     fullDescription: "Todo-приложение с полным набором функций для управления задачами. Пользователи могут создавать новые задачи, отмечать выполненные, редактировать существующие и фильтровать задачи по статусу. Все данные сохраняются в LocalStorage браузера.",
                     images: ["../pictures/todo-1.jpg", "../pictures/todo-2.jpg", "../pictures/todo-3.jpg"],
-                    liveLink: "https://example.com/todo-app",
-                    codeLink: "https://github.com/username/todo-app",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-11-15",
                     image: "../pictures/todo-app.jpg"
                 },
@@ -105,8 +105,8 @@
                     description: "Полнофункциональный интернет-магазин с корзиной покупок, системой фильтрации товаров и панелью администратора.",
                     fullDescription: "Современный интернет-магазин на React с использованием современных hooks и state management. Включает каталог товаров, корзину покупок, систему фильтрации и поиска, а также административную панель для управления товарами.",
                     images: ["../pictures/ecommerce-1.jpg", "../pictures/ecommerce-2.jpg", "../pictures/ecommerce-3.jpg"],
-                    liveLink: "https://example.com/ecommerce",
-                    codeLink: "https://github.com/username/ecommerce",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-11-01",
                     image: "../pictures/ecommerce.jpg"
                 },
@@ -118,8 +118,8 @@
                     description: "Адаптивное портфолио на Bootstrap 5 с анимациями и интерактивными элементами.",
                     fullDescription: "Профессиональное портфолио, построенное на основе Bootstrap 5. Включает адаптивную сетку, модальные окна, карусели и другие компоненты фреймворка. Добавлены кастомные анимации и интерактивные элементы для улучшения пользовательского опыта.",
                     images: ["../pictures/portfolio-1.jpg", "../pictures/portfolio-2.jpg", "../pictures/portfolio-3.jpg"],
-                    liveLink: "https://example.com/bootstrap-portfolio",
-                    codeLink: "https://github.com/username/bootstrap-portfolio",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-10-20",
                     image: "../pictures/portfolio.jpg"
                 },
@@ -131,8 +131,8 @@
                     description: "Приложение для просмотра погоды с использованием стороннего API.",
                     fullDescription: "Погодное приложение, которое получает данные от OpenWeatherMap API. Функции включают автоматическое определение местоположения, поиск погоды по городам, отображение текущей погоды и прогноза на 5 дней.",
                     images: ["../pictures/weather-1.jpg", "../pictures/weather-2.jpg", "../pictures/weather-3.jpg"],
-                    liveLink: "https://example.com/weather-app",
-                    codeLink: "https://github.com/username/weather-app",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-10-10",
                     image: "../pictures/weather-app.jpg"
                 },
@@ -144,8 +144,8 @@
                     description: "Мини-социальная сеть с авторизацией, лентой постов, системой комментариев и лайков.",
                     fullDescription: "Социальная сеть с полным набором функций: регистрация и авторизация пользователей, создание и редактирование постов, система комментариев и лайков, личные сообщения. Для backend используется Firebase.",
                     images: ["../pictures/social-1.jpg", "../pictures/social-2.jpg", "../pictures/social-3.jpg"],
-                    liveLink: "https://example.com/social-app",
-                    codeLink: "https://github.com/username/social-app",
+                    liveLink: "#",
+                    codeLink: "#",
                     date: "2024-09-25",
                     image: "../pictures/social-app.jpg"
                 }
@@ -181,11 +181,7 @@
                     projectCard.className = `project-card ${project.category}`;
                     projectCard.innerHTML = `
                         <div class="project-image-container">
-                            <img src="${project.image}" alt="${project.title}" class="project-preview-image" onerror="handleImageError(this)">
-                            <div class="project-preview-fallback">
-                                <div class="fallback-icon">💻</div>
-                                <div class="fallback-text">${project.title}</div>
-                            </div>
+                            <img src="${project.image}" alt="${project.title}" class="project-preview-image">
                         </div>
                         <div class="project-info">
                             <h3>${project.title}</h3>
@@ -197,13 +193,6 @@
                     projectCard.addEventListener('click', () => openModal(project));
                     projectsContainer.appendChild(projectCard);
                 });
-            }
-
-            // Обработка ошибок загрузки изображений
-            function handleImageError(img) {
-                img.style.display = 'none';
-                const fallback = img.nextElementSibling;
-                fallback.style.display = 'flex';
             }
 
             // Форматирование даты
@@ -225,7 +214,7 @@
                     </div>
                     
                     <div class="modal-main-image">
-                        <img src="${project.image}" alt="${project.title}" class="modal-preview" onerror="this.style.display='none'">
+                        <img src="${project.image}" alt="${project.title}" class="modal-preview">
                     </div>
                     
                     <div class="modal-description">
@@ -247,10 +236,7 @@
                         <div class="modal-images">
                             ${project.images.map((img, index) => 
                                 `<div class="modal-image-item">
-                                    <img src="${img}" alt="Скриншот ${index + 1}" class="modal-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                                    <div class="image-placeholder" style="display: none;">
-                                        <div class="placeholder-text">Скриншот ${index + 1}</div>
-                                    </div>
+                                    <img src="${img}" alt="Скриншот ${index + 1}" class="modal-screenshot">
                                     <div class="image-caption">Скриншот ${index + 1}</div>
                                 </div>`
                             ).join('')}

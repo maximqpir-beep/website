@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио - Главная</title>
-    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-    <div class="logo">
-        <img src="../favicon/favicon.ico" alt="Логотип" class="logo-image">
-        Максим
-    </div>
-    <h1 style="display: none;">Максим</h1>
-    <button class="mobile-menu-btn">☰</button>
-    <nav>
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="pages/projects.html">Проекты</a></li>
-        <li><a href="pages/diary.html">Дневник</a></li>
-        <li><a href="pages/contacts.html">Контакты</a></li>
-    </ul>
-</nav>
-</header>
+        <div class="logo">
+            <img src="favicon/favicon.ico" alt="Логотип" class="logo-image">
+            Максим
+        </div>
+        <button class="mobile-menu-btn">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="pages/projects.html">Проекты</a></li>
+                <li><a href="pages/diary.html">Дневник</a></li>
+                <li><a href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="hero">
@@ -67,35 +66,37 @@
         </section>
 
         <section class="best-projects">
-    <h2>Лучшие проекты</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <img src="images/P1.png" alt="Личный сайт" class="project-image">
-            <div class="project-overlay">
-                <h3>Личный сайт</h3>
-                <p>HTML, CSS</p>
+            <h2>Лучшие проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/P1.png" alt="Личный сайт" class="project-image">
+                    <div class="project-overlay">
+                        <h3>Личный сайт</h3>
+                        <p>HTML, CSS</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/todo.png" alt="Todo приложение" class="project-image">
+                    <div class="project-overlay">
+                        <h3>Todo приложение</h3>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/P3.png" alt="Интернет-магазин" class="project-image">
+                    <div class="project-overlay">
+                        <h3>Интернет-магазин</h3>
+                        <p>React</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="project-card">
-            <img src="images/todo.png" alt="Todo приложение" class="project-image">
-            <div class="project-overlay">
-                <h3>Todo приложение</h3>
-                <p>JavaScript</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="images/P3.png" alt="Интернет-магазин" class="project-image">
-            <div class="project-overlay">
-                <h3>Интернет-магазин</h3>
-                <p>React</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <footer>
         <p>© 2025 Контакты</p>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
