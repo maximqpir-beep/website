@@ -181,7 +181,11 @@
                     projectCard.className = `project-card ${project.category}`;
                     projectCard.innerHTML = `
                         <div class="project-image-container">
+<<<<<<< HEAD
                             <img src="${project.image}" alt="${project.title}" class="project-preview-image" loading="lazy">
+=======
+                            <img src="${project.image}" alt="${project.title}" class="project-preview-image">
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
                         </div>
                         <div class="project-info">
                             <h3>${project.title}</h3>
@@ -214,7 +218,11 @@
                     </div>
                     
                     <div class="modal-main-image">
+<<<<<<< HEAD
                         <img src="${project.image}" alt="${project.title}" class="project-preview-image" loading="lazy">
+=======
+                        <img src="${project.image}" alt="${project.title}" class="modal-preview">
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
                     </div>
                     
                     <div class="modal-description">
@@ -236,7 +244,11 @@
                         <div class="modal-images">
                             ${project.images.map((img, index) => 
                                 `<div class="modal-image-item">
+<<<<<<< HEAD
                                     <img src="${project.image}" alt="${project.title}" class="project-preview-image" loading="lazy">
+=======
+                                    <img src="${img}" alt="Скриншот ${index + 1}" class="modal-screenshot">
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
                                     <div class="image-caption">Скриншот ${index + 1}</div>
                                 </div>`
                             ).join('')}

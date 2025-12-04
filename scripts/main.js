@@ -1,8 +1,47 @@
+<<<<<<< HEAD
 // Main.js - основной файл JavaScript с реализацией практики 16
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Main.js loaded successfully | Практика 16: Адаптивные изображения');
     
     // ===== 1. АКТИВНАЯ СТРАНИЦА В НАВИГАЦИИ =====
+=======
+// Мобильное меню
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+        });
+    }
+
+    // Закрытие меню при клике вне его
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('nav') && !event.target.closest('.mobile-menu-btn')) {
+            navMenu.classList.remove('show');
+        }
+    });
+
+    // Анимация прогресс-баров при скролле
+    const skillBars = document.querySelectorAll('.skill-level');
+    
+    function animateSkillBars() {
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        });
+    }
+
+    // Запуск анимации при загрузке страницы
+    animateSkillBars();
+});
+// Автоматическое определение активной страницы в навигации
+document.addEventListener('DOMContentLoaded', function() {
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
     
@@ -15,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('active');
         }
     });
+<<<<<<< HEAD
     
     // ===== 2. МОБИЛЬНОЕ МЕНЮ =====
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -139,10 +179,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ===== 5. ОБРАБОТКА ОШИБОК ИЗОБРАЖЕНИЙ =====
+=======
+});
+// Обработка ошибок загрузки изображений проектов
+document.addEventListener('DOMContentLoaded', function() {
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
     const projectImages = document.querySelectorAll('.project-image');
     
     projectImages.forEach(img => {
         img.addEventListener('error', function() {
+<<<<<<< HEAD
             console.log('Image failed to load:', this.src);
             // Просто показываем серый фон вместо изображения
             this.style.backgroundColor = '#e9ecef';
@@ -391,4 +437,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Добавляем в конец
     setTimeout(initPractice16, 500);
+=======
+            // Если фото не загрузилось, показываем fallback
+            this.style.display = 'none';
+            const projectCard = this.closest('.project-card');
+            projectCard.classList.add('has-image');
+            projectCard.innerHTML = `
+                <div class="project-fallback">
+                    <div class="fallback-icon">💻</div>
+                    <h3>${this.alt}</h3>
+                </div>
+            `;
+        });
+        
+        // Отмечаем что карточка имеет изображение
+        img.addEventListener('load', function() {
+            this.closest('.project-card').classList.add('has-image');
+        });
+    });
+});
+// Мобильное меню
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+        });
+    }
+
+    // Закрытие меню при клике вне его
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('nav') && !event.target.closest('.mobile-menu-btn')) {
+            navMenu.classList.remove('show');
+        }
+    });
+>>>>>>> b9a5f6d14cbfd2f0e6ce1d7638193991a636e227
 });
