@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Дневник - Портфолио</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к содержанию</a>
+    
+    <div class="page-wrapper">
+        <header>
+            <nav aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="projects.html">Проекты</a>
+                <a href="diary.html">Дневник</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+        
+        <main id="main">
+            <section class="diary-hero">
+                <h1>Мои учебные процессы</h1>
+            </section>
+            
+            <section class="diary-entries">
+                <article class="diary-entry">
+                    <div class="entry-date">15 окт</div>
+                    <div class="entry-content">
+                        <h2>Backend-задача в статусе ✓</h2>
+                        <div class="entry-tags">
+                            <span>JavaScript ✓</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="diary-entry">
+                    <div class="entry-date">01 дек</div>
+                    <div class="entry-content">
+                        <h2>Задача с фронтенда в прогрессе</h2>
+                        <div class="entry-tags">
+                            <span>React в прогрессе</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+            <section class="skills-progress">
+                <div class="skill-item">
+                    <div class="skill-label">Текстовые курсы</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percent="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-label">JavaScript</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-percent="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Портфолио</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
