@@ -1223,3 +1223,94 @@ body {
         color: #94a3b8 !important;
     }
 }
+/* === БЕЛЫЙ ТЕКСТ ДЛЯ БЛОКА ДОСТУПНОСТИ === */
+
+/* Блок с доступностью */
+.info-card {
+    color: #ffffff !important; /* Белый текст */
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Градиентный фон */
+}
+
+/* Заголовок "Доступность" */
+.info-card .card-title {
+    color: #ffffff !important; /* Белый */
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Основной текст */
+.info-card .card-text {
+    color: rgba(255, 255, 255, 0.9) !important; /* Белый с легкой прозрачностью */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Список требований доступности */
+.info-card .accessibility-list {
+    color: #ffffff;
+    padding-left: 1.5rem;
+}
+
+.info-card .accessibility-list li {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Маркеры списка */
+.info-card .accessibility-list li::marker {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Или если используем кастомные маркеры */
+.info-card .accessibility-list li::before {
+    content: "✓";
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    margin-right: 0.5rem;
+    position: absolute;
+    left: -1.5rem;
+}
+
+/* Альтернативный вариант с однотонным фоном */
+/* .info-card {
+    background-color: #3b82f6; Синий фон
+} */
+
+/* Для темной темы - делаем еще ярче */
+@media (prefers-color-scheme: dark) {
+    .info-card {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+    
+    .info-card .card-title {
+        color: #ffffff !important;
+    }
+    
+    .info-card .card-text,
+    .info-card .accessibility-list li {
+        color: rgba(255, 255, 255, 0.95) !important;
+    }
+}
+
+/* Гарантируем, что весь текст белый */
+.info-card * {
+    color: #ffffff !important;
+}
+
+/* Более светлый вариант для элементов списка */
+.info-card .accessibility-list li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Эффект при наведении */
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
