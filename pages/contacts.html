@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Контакты - Портфолио</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header">
+            <nav class="nav" aria-label="Основная навигация">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="logo">
+                            <img src="../images/favicon.ico" alt="Логотип портфолио" width="40" height="40">
+                            <span class="logo-text">Максим</span>
+                        </div>
+                        
+                        <ul class="nav-menu" role="menubar">
+                            <li role="none">
+                                <a href="../index.html" class="nav-link" role="menuitem">Главная</a>
+                            </li>
+                            <li role="none">
+                                <a href="projects.html" class="nav-link" role="menuitem">Проекты</a>
+                            </li>
+                            <li role="none">
+                                <a href="diary.html" class="nav-link" role="menuitem">Дневник</a>
+                            </li>
+                            <li role="none">
+                                <a href="contacts.html" class="nav-link" aria-current="page" role="menuitem">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main id="main" class="main">
+            <section class="contacts">
+                <div class="container">
+                    <h1 class="page-title">Свяжитесь со мной</h1>
+                    
+                    <div class="contacts-layout">
+                        <div class="contact-form-wrapper">
+                            <form id="contact-form" class="contact-form" aria-labelledby="form-title">
+                                <h2 id="form-title" class="form-title">Отправить сообщение</h2>
+                                
+                                <div class="form-group">
+                                    <label for="name">
+                                        Имя <span class="required" aria-hidden="true">*</span>
+                                        <span class="sr-only">Обязательное поле</span>
+                                    </label>
+                                    <input type="text" 
+                                           id="name" 
+                                           name="name" 
+                                           required 
+                                           aria-required="true"
+                                           aria-describedby="name-error"
+                                           placeholder="Введите ваше имя">
+                                    <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">
+                                        Email <span class="required" aria-hidden="true">*</span>
+                                        <span class="sr-only">Обязательное поле</span>
+                                    </label>
+                                    <input type="email" 
+                                           id="email" 
+                                           name="email" 
+                                           required 
+                                           aria-required="true"
+                                           aria-describedby="email-error email-hint"
+                                           placeholder="email@example.com">
+                                    <div id="email-hint" class="hint-text">
+                                        Мы отправим ответ на этот адрес
+                                    </div>
+                                    <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">
+                                        Сообщение <span class="required" aria-hidden="true">*</span>
+                                        <span class="sr-only">Обязательное поле</span>
+                                    </label>
+                                    <textarea id="message" 
+                                              name="message" 
+                                              rows="5" 
+                                              required 
+                                              aria-required="true"
+                                              aria-describedby="message-error message-hint"
+                                              placeholder="Опишите вашу проблему или вопрос"></textarea>
+                                    <div id="message-hint" class="hint-text">
+                                        Опишите вашу проблему или вопрос подробно
+                                    </div>
+                                    <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary submit-btn" aria-label="Отправить форму обратной связи">
+                                    Отправить сообщение
+                                </button>
+                                
+                                <div id="form-success" class="success-message" role="status" aria-live="polite" hidden>
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h2 class="info-title">Контакты</h2>
+                            
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="info-label">Email:</span>
+                                        <a href="mailto:student@edu.ru" class="info-value">student@edu.ru</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="info-label">GitHub:</span>
+                                        <a href="https://github.com/username" target="_blank" rel="noopener" class="info-value">username</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="info-label">Локация:</span>
+                                        <span class="info-value">Город, Страна</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <h3 class="card-title">Доступность</h3>
+                                <p class="card-text">
+                                    Эта страница соответствует требованиям доступности WCAG 2.1 AA:
+                                </p>
+                                <ul class="accessibility-list">
+                                    <li>Полная навигация с клавиатуры (Tab/Shift+Tab)</li>
+                                    <li>Высокая контрастность текста (4.5:1)</li>
+                                    <li>Семантическая HTML-разметка</li>
+                                    <li>Поддержка скринридеров</li>
+                                    <li>Валидация форм в реальном времени</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025 Контакты</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/contacts.js" defer></script>
+    <script>
+            // Ждем загрузки страницы
+            document.addEventListener('DOMContentLoaded', function() {
+    
+            // Находим элементы
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('form-success');
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            // Если форма и кнопка существуют
+            if (form && submitBtn) {
+                
+                // Обработчик отправки формы
+                form.addEventListener('submit', function(event) {
+                    // 1. Отменяем стандартную отправку
+                    event.preventDefault();
+                    
+                    // 2. Проверяем валидность формы
+                    if (!form.checkValidity()) {
+                        // Если есть ошибки, показываем их
+                        form.reportValidity();
+                        return;
+                    }
+                    
+                    // 3. Блокируем кнопку и меняем текст
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Отправка...';
+                    submitBtn.disabled = true;
+                    
+                    // 4. Имитируем отправку на сервер (1.5 секунды)
+                    setTimeout(function() {
+                        
+                        // 5. ПОКАЗЫВАЕМ ПЛАШКУ УСПЕХА
+                        successMessage.hidden = false;
+                        
+                        // 6. Очищаем форму
+                        form.reset();
+                        
+                        // 7. Восстанавливаем кнопку
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // 8. Прокручиваем к плашке
+                        successMessage.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        
+                        // 9. Скрываем плашку через 5 секунд
+                        setTimeout(function() {
+                            successMessage.hidden = true;
+                        }, 5000);
+                        
+                    }, 1500); // Задержка имитации отправки
+                });
+            }
+        });
+    </script><script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
+    
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Валидация формы
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            // Находим кнопку отправки
+            const submitBtn = form.querySelector('.submit-btn');
+            if (!submitBtn) return;
+            
+            // Сохраняем оригинальный текст
+            const originalText = submitBtn.textContent;
+            
+            // Блокируем кнопку
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            // Имитация отправки (1.5 секунды)
+            setTimeout(() => {
+                // УСПЕХ! Показываем плашку
+                successMessage.removeAttribute('hidden');
+                
+                // Очищаем форму
+                form.reset();
+                
+                // Восстанавливаем кнопку
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Автоскрытие через 5 секунд
+                setTimeout(() => {
+                    successMessage.setAttribute('hidden', 'hidden');
+                }, 5000);
+                
+            }, 1500);
+        });
+    }
+});
+</script>
+</body>
+</html>

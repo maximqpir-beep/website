@@ -1,253 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Портфолио</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Имя Студента - Портфолио</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <a href="#main" class="skip-link">Перейти к содержанию</a>
-
-  <div class="page-wrapper">
-    <header>
-      <nav aria-label="Основная навигация">
-        <a href="index.html">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="diary.html">Дневник</a>
-        <a href="contacts.html">Контакты</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <!-- HERO -->
-      <section class="hero">
-        <img src="image/avatar.jpg" alt="Фото студента" width="200" height="200" fetchpriority="high">
-        <h1>Портфолио</h1>
-      </section>
-
-      <!-- КРАТКОЕ ПОРТФОЛИО -->
-      <section class="portfolio-section">
-        <div class="portfolio-header">
-          <h2>Портфолио</h2>
-          <button class="download-btn" onclick="downloadPortfolio()">📄 Скачать</button>
-        </div>
-      </section>
-
-      <!-- НАВЫКИ -->
-      <section class="skills">
-        <div class="skill-item">
-          <div class="skill-label">HTML/CSS</div>
-          <div class="progress-container">
-            <div class="progress-bar" data-percent="90"></div>
-          </div>
-          <span class="skill-percent">90%</span>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">JavaScript</div>
-          <div class="progress-container">
-            <div class="progress-bar" data-percent="80"></div>
-          </div>
-          <span class="skill-percent">80%</span>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">Bootstrap</div>
-          <div class="progress-container">
-            <div class="progress-bar" data-percent="85"></div>
-          </div>
-          <span class="skill-percent">85%</span>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">React</div>
-          <div class="progress-container">
-            <div class="progress-bar" data-percent="60"></div>
-          </div>
-          <span class="skill-percent">60%</span>
-        </div>
-      </section>
-
-      <!-- ПРОЕКТЫ НА ГЛАВНОЙ -->
-      <section class="projects-preview" style="container-type: inline-size; container-name: projects">
-        <h2>Проекты</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <img src="image/p1.png" alt="Проект 1" loading="lazy">
-            <div class="project-content">
-              <h3>Личный веб‑сайт портфолио</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="image/p2.png" alt="Проект 2" loading="lazy">
-            <div class="project-content">
-              <h3>Интернет‑магазин электроники</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="image/p3.png" alt="Проект 3" loading="lazy">
-            <div class="project-content">
-              <h3>Панель задач (To‑Do приложение)</h3>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ПРАКТИКА 16: РАБОТА С ИЗОБРАЖЕНИЯМИ -->
-      <section class="section practice-16 container">
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
+    <div class="page">
         <header class="header">
-          <h1 class="header-title">Работа с изображениями</h1>
-          <p class="header-subtitle">
-            Responsive img, picture, object-fit, retina и галерея на CSS Grid
-          </p>
+            <nav class="nav" aria-label="Основная навигация">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="logo">
+                            <img src="images/favicon.ico" alt="Логотип портфолио" width="40" height="40">
+                            <span class="logo-text">Максим</span>
+                        </div>
+                        
+                        <ul class="nav-menu" role="menubar">
+                            <li role="none">
+                                <a href="index.html" class="nav-link" aria-current="page" role="menuitem">Главная</a>
+                            </li>
+                            <li role="none">
+                                <a href="pages/projects.html" class="nav-link" role="menuitem">Проекты</a>
+                            </li>
+                            <li role="none">
+                                <a href="pages/diary.html" class="nav-link" role="menuitem">Дневник</a>
+                            </li>
+                            <li role="none">
+                                <a href="pages/contacts.html" class="nav-link" role="menuitem">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
+        
+        <main id="main" class="main">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Привет! Я студент <br>группы ЭФБО-12-24</h1>
+                        <p class="hero-subtitle">Увлекаюсь веб-разработкой</p>
+                        <a href="assets/resume.pdf" class="btn btn-primary" download aria-label="Скачать резюме в формате PDF">
+                            <i class="fas fa-download" aria-hidden="true"></i> Скачать резюме
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <picture>
+                            <source type="image/avif" srcset="images/hero-200.jpg">
+                            <source type="image/webp" srcset="images/hero-200.jpg">
+                            <img src="images/hero-200.jpg" alt="Портрет студента" width="200" height="200" class="hero-photo" fetchpriority="high">
+                        </picture>
+                    </div>
+                </div>
+            </section>
 
-        <!-- 1. Обычное responsive‑изображение -->
-        <section class="section">
-          <h2 class="section-title">1. Обычное responsive‑изображение</h2>
-          <div class="image-container">
-            <img
-              src="pictures/personal-site.jpg"
-              alt="Личный сайт — базовый пример"
-              class="responsive-image">
-          </div>
-          <div class="explanation">
-            <h3>Что показываем</h3>
-            <ul>
-              <li>Изображение растягивается на ширину контейнера.</li>
-              <li>Высота подстраивается автоматически, без искажений.</li>
-            </ul>
-          </div>
-        </section>
+            <section class="skills">
+                <div class="container">
+                    <h2 class="section-title">Мои навыки</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percent">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- 2. Picture -->
-        <section class="section">
-          <h2 class="section-title">2. Picture element</h2>
-          <div class="image-container">
-            <picture class="picture-demo">
-              <source srcset="pictures/portfolio.jpg" type="image/webp">
-              <img
-                src="pictures/portfolio.jpg"
-                alt="Портфолио — пример picture"
-                class="responsive-image">
-            </picture>
-          </div>
-          <div class="explanation">
-            <h3>Что показываем</h3>
-            <ul>
-              <li>Несколько источников внутри &lt;picture&gt;.</li>
-              <li>Fallback на обычный JPEG.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 3. Разные экраны -->
-        <section class="section">
-          <h2 class="section-title">3. Разные экраны (desktop / tablet / mobile)</h2>
-          <div class="image-container">
-            <picture class="picture-demo">
-              <source media="(min-width: 1200px)" srcset="pictures/ecommerce.jpg">
-              <source media="(min-width: 768px)" srcset="pictures/social-app.jpg">
-              <img
-                src="pictures/todo-app.jpg"
-                alt="Разные макеты под разные устройства"
-                class="responsive-image">
-            </picture>
-          </div>
-          <div class="explanation">
-            <h3>Что показываем</h3>
-            <ul>
-              <li>Картинка e-commerce для широких экранов.</li>
-              <li>Social‑app для планшетов.</li>
-              <li>Todo‑app для телефонов.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 4. Retina -->
-        <section class="section">
-          <h2 class="section-title">4. Retina‑пример</h2>
-          <div class="image-container">
-            <img
-              src="pictures/weather-app.jpg"
-              srcset="pictures/weather-app.jpg 1x, pictures/weather-app.jpg 2x"
-              alt="Иконка приложения погоды"
-              class="retina-image">
-          </div>
-          <div class="explanation">
-            <h3>Что показываем</h3>
-            <ul>
-              <li>Использование <code>srcset</code> с 1x и 2x.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 5. Object-fit -->
-        <section class="section">
-          <h2 class="section-title">5. Object-fit</h2>
-          <div class="object-fit-demo">
-            <div class="object-fit-item">
-              <img src="pictures/personal-site-1.jpg" alt="Cover" class="object-fit-cover">
-              <span>object-fit: cover</span>
+            <section class="projects-preview">
+                <div class="container">
+                    <h2 class="section-title">Лучшие проекты</h2>
+                    <div class="projects-preview-grid">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="images/project1.png" alt="Личный сайт - HTML, CSS проект" width="300" height="200">
+                            </div>
+                            <h3 class="project-title">Личный сайт</h3>
+                            <p class="project-description">HTML, CSS</p>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="images/project2.png" alt="Todo-приложение на JavaScript" width="300" height="200">
+                            </div>
+                            <h3 class="project-title">Todo-приложение</h3>
+                            <p class="project-description">JavaScript</p>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="images/project3.png" alt="Интернет-магазин на React" width="300" height="200">
+                            </div>
+                            <h3 class="project-title">Интернет-магазин</h3>
+                            <p class="project-description">React</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025 Контакты</p>
             </div>
-            <div class="object-fit-item">
-              <img src="pictures/personal-site-1.jpg" alt="Contain" class="object-fit-contain">
-              <span>object-fit: contain</span>
-            </div>
-            <div class="object-fit-item">
-              <img src="pictures/personal-site-1.jpg" alt="Fill" class="object-fit-fill">
-              <span>object-fit: fill</span>
-            </div>
-          </div>
-          <div class="explanation">
-            <h3>Что показываем</h3>
-            <ul>
-              <li><strong>cover</strong> — обрезка без искажений.</li>
-              <li><strong>contain</strong> — всё влезает, есть поля.</li>
-              <li><strong>fill</strong> — без полей, но с искажением.</li>
-            </ul>
-          </div>
-        </section>
+        </footer>
+    </div>
 
-        <!-- 6. Галерея -->
-        <section class="section">
-          <h2 class="section-title">6. Галерея проектов</h2>
-          <div class="gallery">
-            <div class="gallery-item">
-              <div class="gallery-image-container">
-                <img src="pictures/personal-site-1.jpg" alt="Личный сайт 1" class="gallery-image">
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image-container">
-                <img src="pictures/personal-site-2.jpg" alt="Личный сайт 2" class="gallery-image">
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image-container">
-                <img src="pictures/personal-site-3.jpg" alt="Личный сайт 3" class="gallery-image">
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image-container">
-                <img src="pictures/portfolio.jpg" alt="Портфолио" class="gallery-image">
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <!-- КОНЕЦ ПРАКТИКИ 16 -->
-    </main>
-
-    <footer>
-      <p>© 2025 Портфолио</p>
-    </footer>
-  </div>
-
-  <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

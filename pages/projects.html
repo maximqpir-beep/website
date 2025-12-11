@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Мои проекты - Портфолио</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header">
+            <nav class="nav" aria-label="Основная навигация">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="logo">
+                            <img src="../images/favicon.ico" alt="Логотип портфолио" width="40" height="40">
+                            <span class="logo-text">Максим</span>
+                        </div>
+                        
+                        <ul class="nav-menu" role="menubar">
+                            <li role="none">
+                                <a href="../index.html" class="nav-link" role="menuitem">Главная</a>
+                            </li>
+                            <li role="none">
+                                <a href="projects.html" class="nav-link" aria-current="page" role="menuitem">Проекты</a>
+                            </li>
+                            <li role="none">
+                                <a href="diary.html" class="nav-link" role="menuitem">Дневник</a>
+                            </li>
+                            <li role="none">
+                                <a href="contacts.html" class="nav-link" role="menuitem">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main id="main" class="main">
+            <section class="projects-page">
+                <div class="container">
+                    <h1 class="page-title">Мои проекты</h1>
+                    
+                    <div class="filter-controls" role="toolbar" aria-label="Фильтры проектов">
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all" aria-pressed="true">Все</button>
+                            <button class="filter-btn" data-filter="html" aria-pressed="false">HTML</button>
+                            <button class="filter-btn" data-filter="js" aria-pressed="false">JS</button>
+                            <button class="filter-btn" data-filter="react" aria-pressed="false">React</button>
+                        </div>
+                    </div>
+
+                    <div class="projects-area" data-container="projects">
+                        <div class="projects-list">
+                            <article class="project-card" data-category="html">
+                                <div class="project-image">
+                                    <img src="../images/project1.png" alt="Личный сайт - HTML и CSS проект" width="400" height="300">
+                                </div>
+                                <div class="project-content">
+                                    <h2 class="project-title">Личный сайт</h2>
+                                    <p class="project-tech">HTML, CSS</p>
+                                    <p class="project-description">Адаптивный личный сайт с современным дизайном и семантической разметкой.</p>
+                                    <button class="btn btn-secondary view-details" 
+                                            aria-label="Посмотреть детали проекта 'Личный сайт'"
+                                            data-project="1">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="project-card" data-category="js">
+                                <div class="project-image">
+                                    <img src="../images/project2.png" alt="Todo-приложение на чистом JavaScript" width="400" height="300">
+                                </div>
+                                <div class="project-content">
+                                    <h2 class="project-title">Todo-приложение</h2>
+                                    <p class="project-tech">JavaScript</p>
+                                    <p class="project-description">Интерактивное приложение для управления задачами с локальным хранилищем.</p>
+                                    <button class="btn btn-secondary view-details"
+                                            aria-label="Посмотреть детали проекта 'Todo-приложение'"
+                                            data-project="2">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="project-card" data-category="react">
+                                <div class="project-image">
+                                    <img src="../images/project3.png" alt="Интернет-магазин на React" width="400" height="300">
+                                </div>
+                                <div class="project-content">
+                                    <h2 class="project-title">Интернет-магазин</h2>
+                                    <p class="project-tech">React</p>
+                                    <p class="project-description">Полнофункциональный интернет-магазин с корзиной покупок и фильтрацией.</p>
+                                    <button class="btn btn-secondary view-details"
+                                            aria-label="Посмотреть детали проекта 'Интернет-магазин'"
+                                            data-project="3">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="project-card" data-category="html">
+                                <div class="project-image">
+                                    <img src="../images/project4.jpg" alt="Портфолио на Bootstrap" width="400" height="300">
+                                </div>
+                                <div class="project-content">
+                                    <h2 class="project-title">Портфолио</h2>
+                                    <p class="project-tech">Bootstrap</p>
+                                    <p class="project-description">Адаптивное портфолио с использованием Bootstrap 5 и кастомных стилей.</p>
+                                    <button class="btn btn-secondary view-details"
+                                            aria-label="Посмотреть детали проекта 'Портфолио'"
+                                            data-project="4">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Модальное окно для деталей проекта -->
+        <div class="overlay" id="modal-overlay" aria-hidden="true" tabindex="-1"></div>
+        <div class="modal" 
+             id="project-modal" 
+             role="dialog" 
+             aria-modal="true" 
+             aria-labelledby="modal-title" 
+             aria-describedby="modal-description"
+             tabindex="-1"
+             hidden>
+            <div class="modal-content">
+                <button class="close-btn" 
+                        aria-label="Закрыть модальное окно"
+                        id="close-modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                    <span class="sr-only">Закрыть</span>
+                </button>
+                
+                <h2 id="modal-title" class="modal-title"></h2>
+                <p id="modal-description" class="modal-description"></p>
+                
+                <div class="modal-tech" id="modal-tech"></div>
+                
+                <div class="modal-links">
+                    <a href="#" class="btn btn-primary" id="modal-live-link" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Живая версия
+                    </a>
+                    <a href="#" class="btn btn-secondary" id="modal-code-link" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i> Исходный код
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025 Контакты</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/projects.js" defer></script>
+</body>
+</html>
