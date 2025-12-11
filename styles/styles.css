@@ -1050,3 +1050,176 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
 }
+/* === Специфичные стили для структуры как в макете === */
+
+/* Контейнер контактов */
+.contact-info {
+    color: #0f172a !important; /* Очень темный */
+}
+
+/* Заголовок "Контакты" */
+.contact-info h3,
+.contact-info h4 {
+    color: #0f172a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Элементы списка контактов */
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Делаем метки (Email:, GitHub:) темнее */
+.contact-info li strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Или если метки не в strong, а просто текст */
+.contact-info li::before {
+    color: #0f172a;
+    font-weight: 600;
+}
+/* === ОБНОВЛЕНИЕ НАВИГАЦИИ - ТЕМНОЕ ВЫДЕЛЕНИЕ === */
+
+/* Активная страница - темное выделение */
+.nav-link[aria-current="page"] {
+    background-color: #1e40af; /* Темно-синий для активной страницы */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Эффект при наведении на активную страницу */
+.nav-link[aria-current="page"]:hover {
+    background-color: #1e3a8a; /* Еще темнее при наведении */
+}
+
+/* Фокус для активной страницы */
+.nav-link[aria-current="page"]:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    background-color: #1e3a8a;
+}
+
+/* Делаем неактивные ссылки немного светлее для контраста */
+.nav-link:not([aria-current="page"]) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link:not([aria-current="page"]):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Для мобильных делаем выделение еще заметнее */
+@media (max-width: 768px) {
+    .nav-link[aria-current="page"] {
+        background-color: #1e3a8a;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+}
+/* === ТЕМНЫЙ ТЕКСТ ДЛЯ КОНТАКТОВ === */
+
+/* Весь блок контактов */
+.contact-info {
+    color: #0f172a; /* Очень темный сине-серый */
+}
+
+/* Заголовок "Контакты" - еще темнее */
+.contact-info .info-title {
+    color: #0f172a !important; /* Самый темный */
+    font-weight: 700; /* Жирный */
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Список контактов */
+.contact-info .info-list {
+    color: #1e293b; /* Темный текст */
+}
+
+/* Каждый элемент контакта */
+.contact-info .info-item {
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+/* Метки (Email:, GitHub:, Локация:) */
+.contact-info .info-label {
+    color: #0f172a !important; /* Очень темный */
+    font-weight: 600; /* Полужирный */
+    display: inline-block;
+    min-width: 80px;
+}
+
+/* Значения контактов */
+.contact-info .info-value {
+    color: #1e293b !important; /* Темный */
+    font-weight: 500;
+}
+
+/* Ссылки (email и GitHub) */
+.contact-info a.info-value {
+    color: #1e40af !important; /* Темно-синий для ссылок */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a.info-value:hover {
+    color: #1e3a8a !important; /* Еще темнее при наведении */
+    text-decoration: underline;
+}
+
+/* Иконки */
+.contact-info .info-item i {
+    color: #334155 !important; /* Темно-серый для иконок */
+    width: 20px;
+    margin-right: 0.75rem;
+}
+
+/* Если нужен дополнительный контраст на светлом фоне */
+.contact-info {
+    background-color: #f8fafc; /* Светлый фон для контраста */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Для темной темы */
+@media (prefers-color-scheme: dark) {
+    .contact-info {
+        background-color: #1e293b;
+        border-color: #334155;
+    }
+    
+    .contact-info .info-title {
+        color: #f1f5f9 !important;
+    }
+    
+    .contact-info .info-label {
+        color: #cbd5e1 !important;
+    }
+    
+    .contact-info .info-value,
+    .contact-info .info-item {
+        color: #e2e8f0 !important;
+    }
+    
+    .contact-info a.info-value {
+        color: #60a5fa !important;
+    }
+    
+    .contact-info i {
+        color: #94a3b8 !important;
+    }
+}
